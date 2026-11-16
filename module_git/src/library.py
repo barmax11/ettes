@@ -7,16 +7,28 @@ print("3. Вихід")
 
 while True:
     action = int(input("Виберіть дію: "))
-    name = input("Введіть своє імя :")
-    book = input("Введіть назву книжки :")
 
-    if action == 1:
-        time = int(input("На скільки днів хочете взяти :"))
+    if action == 1 or action == 2:
+        name = input("Введіть своє ім'я: ")
+        book = input("Введіть назву книжки: ")
 
-        print(f"Кижнку {book} видано читачеві {name} на {time} днів")
+        if name == "" or book == "":
+            print("Імя та назва не можуть бути порожніми")
 
-    elif action == 2:
-        print(f"Читач {name} повернув книжку {book}")
+        elif action == 1:
+            time = int(input("На скільки днів хочете взяти :"))
+
+            if time < 0:
+                print("Кількість днів не може бути відємною")
+
+            elif time > 30:
+                print("Книжку можна отримати максимум на 30 днів")
+
+            else:
+                print(f"Книжку {book} видано читачеві {name} на {time} днів")
+
+        elif action == 2:
+            print(f"Читач {name} повернув книжку {book}")
 
     elif action == 3:
         print("До побачення")
