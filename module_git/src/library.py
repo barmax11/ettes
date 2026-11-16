@@ -7,18 +7,15 @@ print("3. Вихід")
 
 while True:
     action = int(input("Виберіть дію: "))
+    name = input("Введіть своє імя :")
+    book = input("Введіть назву книжки :")
 
     if action == 1:
-        name = input("Введіть своє імя :")
-        book = input("Введіть назву книжки :")
         time = int(input("На скільки днів хочете взяти :"))
 
         print(f"Кижнку {book} видано читачеві {name} на {time} днів")
 
     elif action == 2:
-        name = input("Введіть своє імя :")
-        book = input("Введіть назву книжки :")
-
         print(f"Читач {name} повернув книжку {book}")
 
     elif action == 3:
