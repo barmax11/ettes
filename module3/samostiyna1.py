@@ -63,5 +63,3 @@ print(f"Купюр по 500: {patihatka: .0f}")
 print(f"Купюр по 200: {leska: .0f}")
 print(f"Купюр по 100: {sotka: .0f}")
 print(f"Купюр по 0: {change: .0f}")
-
-

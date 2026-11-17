@@ -27,7 +27,7 @@
 # print("Площа дорівнює:", area)
 
 
-#результат чат бота
+# результат чат бота
 # width = float(input("Введіть ширину: "))
 # height = float(input("Введіть висоту: "))
 #
@@ -81,7 +81,6 @@
 # print(result)
 
 
-
 # num1 = int(input("перше число: "))
 # num2 = int(input("друге число: "))
 # result1 = num1 + num2
@@ -92,7 +91,7 @@
 # print("Добуток чисел:",result3)
 
 
-#рішення хелпера
+# рішення хелпера
 # num1 = int(input("Перше число: "))
 # num2 = int(input("Друге число: "))
 #
@@ -145,13 +144,8 @@ name = input("Введіть ваше ім'я :")
 year_born = int(input("Введіть ваш рік народження :"))
 height = float(input("Введіть ваш ріст у метрах :"))
 year = 2026
-year_born1 = (year - year_born)
+year_born1 = year - year_born
 print("---АНКЕТА КОРИСТУВАЧА---")
 print("\tІм'я:", name)
 print("\tВік:", year_born1, "років")
 print("\tЗріст:", height, "м")
-
-
-
-
-

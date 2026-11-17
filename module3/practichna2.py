@@ -50,7 +50,6 @@
 #     print(f"Ціна буде складати: {total_price: .0f}")
 
 
-
 # Завдання 4
 # Орендувати авто можна лише якщо
 # ● у вас є ліцензія
@@ -120,7 +119,7 @@ time = float(input("Введіть терму кредиту у роках :"))
 
 if credit <= 10000 and time <= 3:
     percent = 8
-elif credit <10000 and time >= 3:
+elif credit < 10000 and time >= 3:
     percent = 10
 elif 10000 < credit <= 50000 and time <= 3:
     percent = 12
@@ -129,15 +128,9 @@ elif 10000 < credit <= 50000 and time >= 3:
 else:
     percent = 20
 
-total = credit * (1 + percent / 100 ) ** time
+total = credit * (1 + percent / 100) ** time
 monthly_payment = total / (time * 12)
 
 print(f"Відсоткова ставка: {percent}%")
 print(f"Загальна сума кредиту: {total} доларів")
 print(f"Щомісячний платіж: {monthly_payment} доларів ")
-
-
-
-
-
-

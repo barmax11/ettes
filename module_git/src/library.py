@@ -36,4 +36,3 @@ while True:
 
     else:
         print("Неправильна дія")
-
