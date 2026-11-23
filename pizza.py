@@ -10,7 +10,17 @@ while True:
         print("\nПепероні - 180 грн")
         print("\nЧортири сири - 200 грн")
 
-        pizza = input("Яку піцу бажаєте :").upper
-        count = int("Скільки піц ви хочете :")
+        pizza = input("Яку піцу бажаєте :")
+        count = int(input("Скільки піц ви хочете :"))
 
-        print(f"Замовлено {pizza}, {count} шт")
+        if pizza in ["МАРГАРИТА", "ПЕПЕРОНІ", "ЧОТИРИ СИРИ"]:
+            print(f"Замовлено {pizza}, {count} шт")
+
+        else:
+            print("Ви ввели неправильну назву піци")
+
+    if action == "2":
+        break
+
+    else:
+        print("Ви ввели непрвильну дію")
