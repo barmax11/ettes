@@ -6,7 +6,7 @@
 # text = input("Введіть рядок: ")
 # index = int(input("Введіть індекс: "))
 #
-# if 0 < index < len(text):
+# if 0 <= index < len(text):
 #     print(text[index])
 # else:
 #     print("Помилка такого інексу не існує")
@@ -17,8 +17,8 @@
 
 # text = input("Введіть рядок: ")
 #
-# start = float(input("Введіть початковий індекс: "))
-# end = float(input("Введіть кінцевий індекс: "))
+# start = int(input("Введіть початковий індекс: "))
+# end = int(input("Введіть кінцевий індекс: "))
 #
 # segment = text[start:end]
 #
@@ -31,7 +31,7 @@
 # text = input("Введіть рядок :")
 # number = int(input("Введіть число :"))
 #
-# print(text[number:])
+# print(text[-number:])
 # print(text[:number])
 
 
@@ -63,6 +63,8 @@
 # Приклади: Кіт утік, око, потоп
 
 # text = input("Введіть рядок :")
+#
+# text = text.lower().replace(" ","")
 #
 # if text == text[::-1]:
 #     print("Слово паліндром")
