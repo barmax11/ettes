@@ -130,3 +130,70 @@
 # кінець списку.
 # В інших випадках запросіть ID(індекс) клієнта і якщо
 # він вірний, то проведіть операцію
+
+accounts = []
+
+while True:
+    print("\n----БАНК----")
+    print("1.Додати клієнта")
+    print("2.Видалити клієнта")
+    print("3.Поповнити рахунок")
+    print("4.Зняти кошти")
+    print("5.Вийти")
+
+    command = input("Виберіть команду :")
+
+    if command == "1":
+        accounts.append(0)
+        print("Клієнта додано")
+        print("id нового клієнта:", len(accounts) - 1)
+
+    elif command == "2":
+        client_id = int(input("Введіть id клієнта: "))
+
+        if 0 <= client_id < len(accounts):
+            accounts.pop(client_id)
+            print("Клієнта видалено")
+        else:
+            print("Такого клієнта не існує")
+
+    elif command == "3":
+        client_id = int(input("Введіть id клієнта: "))
+
+        if 0 <= client_id < len(accounts):
+            amount = float(input("Сума поповнення: "))
+
+            if amount > 0:
+                accounts[client_id] += amount
+                print("Рахунок поповнено")
+                print("Баланс", accounts[client_id])
+            else:
+                print("Сума повинна бути більшею за нуль")
+
+        else:
+            print("Такого клієнта не існує")
+
+    elif command == "4":
+        client_id = int(input("Введіть id клієнта: "))
+
+        if 0 <= client_id < len(accounts):
+            amount = float(input("Сума зняття: "))
+
+            if 0 < amount <= accounts[client_id]:
+                accounts[client_id] -= amount
+                print("Кошти знято")
+                print("Баланс:", accounts[client_id])
+            else:
+                print("Недостатньо коштів або неправильна сума")
+
+        else:
+            print("Такого клієнта не існує")
+
+    elif command == "5":
+        print("Дякуємо за використання банку")
+        break
+
+    else:
+        print("Невідома команда")
+
+    print("Усі рахунки:", accounts)
