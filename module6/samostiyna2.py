@@ -18,3 +18,14 @@
 #     count += 1
 #
 #     print(f"{word} {count} - ", word[:index] + "*" + word[index + 1:])
+
+
+# Завдання 2
+# Користувач вводить слово. Зробіть першу та останню
+# літеру великою. Виправіть помилку в коді
+
+word = input("Введіть слово: ")
+
+result = word[0].upper() + word[1:-1] + word[-1].upper()
+
+print(result)
